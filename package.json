@@ -1,0 +1,18 @@
+{
+  "name": "aoe4-replay-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static web viewer for Age of Empires IV replays",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc -p .",
+    "compare": "node test/compare.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}

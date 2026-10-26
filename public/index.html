@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AoE4 replay viewer</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AoE4 replay viewer</h1>
+    <form id="load-form">
+      <input id="match-id" placeholder="Match ID or replay API URL" autocomplete="off">
+      <input id="profile-id" placeholder="Profile ID" autocomplete="off">
+      <button type="submit">Load</button>
+      <span class="muted">or</span>
+      <label class="file-button">Open file…<input id="file" type="file" accept=".gz,.rec,.json" hidden></label>
+    </form>
+  </header>
+  <div id="status" hidden></div>
+  <h2 id="match-title"></h2>
+  <nav id="tabs" hidden></nav>
+  <main id="content">
+    <section class="intro">
+      <p>Enter a match ID and the profile ID of one of its players, or open a replay
+        (<code>.rec</code> from <code>Documents\My Games\Age of Empires IV\playback</code>,
+        a <code>.gz</code> from the replay API, or CLI JSON). Dropping a file on the page works too.</p>
+      <p class="muted">Parsed in your browser; nothing is uploaded.</p>
+    </section>
+  </main>
+  <footer class="muted small">
+    Age of Empires IV © Microsoft Corporation. This viewer was created under Microsoft's
+    <a href="https://www.xbox.com/en-US/developers/rules">Game Content Usage Rules</a> using assets from
+    Age of Empires IV, and it is not endorsed by or affiliated with Microsoft.
+    Unit, building and technology names and icons come from <a href="https://data.aoe4world.com">aoe4world data</a>.
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
