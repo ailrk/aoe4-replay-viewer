@@ -14,6 +14,18 @@ following is an example match:
 
 > https://ailrk.github.io/aoe4-replay-viewer/?matchId=256583577&profileId=7614140#map
 
+## Query parameters
+
+> matchId=[string]&profileId=[string]
+
+Supply a match id and a profile id. If the match exists, the tool will fetch
+the replay file from `api.ageofempires.com`.
+
+> replay=[url]
+
+An external url of a replay file. The replay will be downloaded and loaded
+direclty. The server hosts the replay needs to return a CORS header to support
+this.
 
 ## Limitation
 
